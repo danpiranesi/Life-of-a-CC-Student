@@ -1,0 +1,10 @@
+TITLE::depression?&&&
+CATEGORY::6&&&
+SCENARIOTEXT::You are feeling more tired and down everyday than you used to. You start thinking about how maybe a “prestigious” higher education isn’t for you. Maybe being an adult just sucks. You talk to your friends and they can’t offer any solid advice. Do you&&&
+CHOICE1::Keep your silly emotions and thoughts to yourself.&&&
+CHOICE2::Reach out to CC’s terrible counseling services.&&&
+PICKEDCHOICE1::You end up learning how to tough it out, but you also lose some friends over being “irritable” and “toxic”. You try really hard in class, but you just can’t think as clearly as before, so your professor recommends you try therapy.&&&
+PICKEDCHOICE2::You end up hating all of the counselors at CC and the irony of how an institution with so many resources could lack so severely in mental health care, but at least you had a professional to talk to.&&&
+RESULT1::-10;-10;-10&&&
+RESULT2::-10;0;15&&&
+##########################
