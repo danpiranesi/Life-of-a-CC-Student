@@ -14,7 +14,6 @@ C9: SL below 0 (leave school)
 C10: G below 0 (dropout)
 C11: E below 0 (sudden cardiac death)
 
-
 The standard used for "low" is 25.
 In general, the value modification when any resource is low should be subtle.
 This is to avoid sudden death.
