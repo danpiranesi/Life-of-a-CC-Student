@@ -1,4 +1,6 @@
-import jdk.jfr.Category;
+package com.cclifegame;
+
+//import jdk.jfr.Category;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -11,33 +13,34 @@ public class MainGame {
     private int[] stats;
     private int block = 0;
     // We should have 8 repository for the scenarios afterwards
-    ArrayList<Scenario> Scenarios ;
+    ArrayList<Scenario> Scenarios;
     ArrayList<Ending> Endings;
     private Ending end;
     private Scenario scene;
 
     /**
      * Initiate the game with scenarios and endings.
+     * 
      * @param Scenarios
      */
     public MainGame(ArrayList<Scenario> Scenarios, ArrayList<Ending> Endings) {
         this.inGame = true;
-        this.stats = new int[]{50,50,50};
+        this.stats = new int[] { 50, 50, 50 };
         this.block = 0;
         this.Scenarios = Scenarios;
         this.Endings = Endings;
 
         // in game loop
-        while (inGame){
-            //start of a block
+        while (inGame) {
+            // start of a block
             // if fits one of the first priority ending requirements:
-            if (checkFirstEnding()){
+            if (checkFirstEnding()) {
                 // debugging
                 System.out.println("1st End true");
                 // print ending description
                 System.out.println(end.getDescription());
                 inGame = false;
-            } else if (block>0){
+            } else if (block > 0) {
                 // debugging
                 System.out.println("Finished End true");
                 // debugging
@@ -50,7 +53,7 @@ public class MainGame {
                 // debugging
                 System.out.println("Looping true");
                 // initial user choices
-                int[]userChoice = new int[3];
+                int[] userChoice = new int[3];
                 // System.out.println(end.getDescription());
                 // scene = thecorrespondentArrayList.randomdraw();
                 // testing:
@@ -58,21 +61,22 @@ public class MainGame {
                 System.out.println(scene.getDescription());
                 System.out.println(Arrays.toString(scene.getChoices()));
                 int choice = userInput();
-                if (choice==1){
+                if (choice == 1) {
                     userChoice = scene.getLchoice();
                     System.out.println(scene.getChoices()[0]);
-                } else if (choice==2) {
+                } else if (choice == 2) {
                     userChoice = scene.getRchoice();
                     System.out.println(scene.getChoices()[1]);
                 } else {
                     System.out.println("Invalid choice!");
                 }
-                for (int i=0;i<3;i++){
-                    this.stats[i] += userChoice[i] ;
+                for (int i = 0; i < 3; i++) {
+                    this.stats[i] += userChoice[i];
                 }
             }
             System.out.println("current stats:");
-            System.out.println("Social life: "+this.stats[0]+" | Grades: "+this.stats[1]+" | Energy: "+this.stats[2]);
+            System.out.println(
+                    "Social life: " + this.stats[0] + " | Grades: " + this.stats[1] + " | Energy: " + this.stats[2]);
             block++;
         }
     }
@@ -82,16 +86,16 @@ public class MainGame {
      * Checking if the current stats fits in any first priority ending
      * condition. If fits then end the game prematurely.
      */
-    public boolean checkFirstEnding(){
+    public boolean checkFirstEnding() {
         // this is done assuming the category is *onto* priority endings
         // get the category of the current stats
-        if(this.getCategory()==9){
+        if (this.getCategory() == 9) {
             end = Endings.get(9);
             return true;
-        } else if(this.getCategory()==10){
+        } else if (this.getCategory() == 10) {
             end = Endings.get(10);
             return true;
-        } else if (this.getCategory()==11){
+        } else if (this.getCategory() == 11) {
             end = Endings.get(11);
             return true;
         } else {
@@ -99,11 +103,12 @@ public class MainGame {
         }
     }
 
-    public void sortScene(){
+    public void sortScene() {
         List<Scenario> sceList = (ArrayList<Scenario>) Scenarios.clone();
         List<Scenario> tired = sceList.stream().filter(
-                Scenario -> Scenario.getCategory()==9).collect(Collectors.toList());
+                Scenario -> Scenario.getCategory() == 9).collect(Collectors.toList());
     }
+
     /**
      * A function to get the category of the player's current stats.
      * 1st Priority ending categories:
@@ -120,27 +125,27 @@ public class MainGame {
      * C7: all too low (on the verge)
      * C8: all good (normie)
      */
-    public int getCategory(){
+    public int getCategory() {
         int[] currentStat = this.getStats();
         // Stats: Social life, Grade, Energy
         // for (int i=0;i<3;i++){
         // 1st Priority checks, anytime i < 0 just end the game
         // C1:
-        if (!(currentStat[0]>0)){
+        if (!(currentStat[0] > 0)) {
             this.inGame = false;
             return 9;
-            }
+        }
         // C2 if C1's not met:
-        else if (!(currentStat[1] > 0)){
+        else if (!(currentStat[1] > 0)) {
             this.inGame = false;
             return 10;
-            }
+        }
         // C3 if C2 & C1's not met:
-        else if (!(currentStat[2] > 0)){
+        else if (!(currentStat[2] > 0)) {
             this.inGame = false;
             return 11;
-            }
-        // 2nd Priority checks -  if previous statements are not met (game still running)
+        }
+        // 2nd Priority checks - if previous statements are not met (game still running)
         else {
             // Here the multiple-fit cases should be checked first
             // C7:
@@ -178,14 +183,14 @@ public class MainGame {
         }
     }
 
-    public int userInput(){
+    public int userInput() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your choice (1 or 2): ");
         int n = input.nextInt();
         return n;
     }
 
-    public void addScene(Scenario scene){
+    public void addScene(Scenario scene) {
         Scenarios.add(scene);
     }
 

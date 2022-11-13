@@ -1,3 +1,5 @@
+package com.cclifegame;
+
 public class Ending {
     private String title;
     private int category;

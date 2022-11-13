@@ -1,3 +1,5 @@
+package com.cclifegame;
+
 public class Scenario {
     private String title;
     private int category;
@@ -18,9 +20,9 @@ public class Scenario {
     /**
      * A function for printing the scenarios.
      */
-    public void printScene(){
+    public void printScene() {
         System.out.println(this.getDescription());
-        System.out.println(this.getChoices()[1]+" || "+this.getChoices()[2]);
+        System.out.println(this.getChoices()[1] + " || " + this.getChoices()[2]);
     }
 
     public String getTitle() {
