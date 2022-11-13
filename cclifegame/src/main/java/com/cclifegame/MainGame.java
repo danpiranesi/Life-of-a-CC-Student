@@ -40,7 +40,7 @@ public class MainGame {
                 // print ending description
                 System.out.println(end.getDescription());
                 inGame = false;
-            } else if (block > 0) {
+            } else if (block > 32) {
                 // debugging
                 System.out.println("Finished End true");
                 // debugging
