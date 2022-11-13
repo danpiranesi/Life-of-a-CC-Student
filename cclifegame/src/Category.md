@@ -16,15 +16,15 @@ This is to avoid sudden death.
 ===============================
 
 ## 1st Priority ending categories:
-C9: SL below 0 (leave school)
-C10: G below 0 (dropout)
-C11: E below 0 (sudden cardiac death)
+<p>C9: SL below 0 (leave school) <br>
+C10: G below 0 (dropout) <br>
+C11: E below 0 (sudden cardiac death) <br></p>
 
 
 ===============================
 
 ## 2nd categories:
-C1: SL too low (go touch grass)
+<p> C1: SL too low (go touch grass)
 C2: G too low (admonition)
 C3: E too low (tired)
 C4: SL & G too low (dorm dweller)
