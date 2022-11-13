@@ -1,2 +1,2 @@
 # Life-of-a-CC-Student
-A choose your own adventure game that highlights the fragility of a stable life at Colorado College.
+A choose your own adventure game that highlights the fragility of a stable life at Colorado College for the Final Project assignment in CP222.
