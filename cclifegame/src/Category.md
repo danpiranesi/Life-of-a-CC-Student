@@ -1,5 +1,5 @@
 # Scenario and Ending Category
-This is a guide to all the scenario categories.
+## This is a guide to all the scenario categories.
 
 In the parenthesis are the nicknames for the categories.
 They will be used in sorting and randomDraw in the main game.
