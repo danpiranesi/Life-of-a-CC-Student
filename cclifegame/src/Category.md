@@ -8,17 +8,22 @@ since that would result in immediate ending of the game.
 C1-3 applies to both ending and scenarios.
 The 2nd category will be the category to draw from when the game is running (stats>0 && block<32).
 
-===============================
-1st Priority ending categories:
-C9: SL below 0 (leave school)
-C10: G below 0 (dropout)
-C11: E below 0 (sudden cardiac death)
 
 The standard used for "low" is 25.
 In general, the value modification when any resource is low should be subtle.
 This is to avoid sudden death.
+
 ===============================
-2nd categories:
+
+## 1st Priority ending categories:
+C9: SL below 0 (leave school)
+C10: G below 0 (dropout)
+C11: E below 0 (sudden cardiac death)
+
+
+===============================
+
+## 2nd categories:
 C1: SL too low (go touch grass)
 C2: G too low (admonition)
 C3: E too low (tired)
