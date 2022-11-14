@@ -328,3 +328,33 @@ PICKEDCHOICE2::THEY PUT THE V ON THE CHAPEL!?!? YOOOOOOOOOOOOOOOOOO&&&
 RESULT1::5;0;-5&&&
 RESULT2::20;-10;-10&&&
 ##########################
+TITLE::physics&&&
+CATEGORY::5&&&
+SCENARIOTEXT::It’s the beginning of second week and you feel like speedrunning quantum physics in 3-and-a-half weeks is too overwhelming. Do you&&&
+CHOICE1::Drop the class!&&&
+CHOICE2::Uh, I think I can get through this…&&&
+PICKEDCHOICE1::That was the best decision of your academic career. You got out more and feel like a vibrant youth once again.&&&
+PICKEDCHOICE2::You are really good at physics now, but you forgot how to talk to people. You also have only slept for a cumulative 10 hours in the past week. Have a good block break!&&&
+RESULT1::10;-5;20&&&
+RESULT2::-10;20;-10&&&
+##########################
+TITLE::yak&&&
+CATEGORY::5&&&
+SCENARIOTEXT::You get roasted in Yikyak!&&&
+CHOICE1::Get your friends to downvote it so it gets taken down.&&&
+CHOICE2::Delete the app and move on.&&&
+PICKEDCHOICE1::Friends came in clutch, but you get judged for caring so much.&&&
+PICKEDCHOICE2::Smart move. Also, cyberbullying isn’t real. Just don’t look at it. Put your phone down. Duh. Good shit.&&&
+RESULT1::-10;0;10&&&
+RESULT2::+10;0;-10&&&
+##########################
+TITLE::crooz&&&
+CATEGORY::2&&&
+SCENARIOTEXT::It's the fourth Tuesday and you have a final exam tomorrow.&&&
+CHOICE1::Study, Study, Study&&&
+CHOICE2::CROOOOOZ&&&
+PICKEDCHOICE1::You are now a weapon of academic achievement.&&&
+PICKEDCHOICE2::You are now a weapon of academic achievement.&&&
+RESULT1::-5;10;-10&&&
+RESULT2::15;15;15&&&
+##########################
