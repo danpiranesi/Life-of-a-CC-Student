@@ -1,0 +1,50 @@
+TITLE::loomisMan&&&
+CATEGORY::3&&&
+SCENARIOTEXT::You see a middle-aged man in a red hoodie with a shaved head standing outside Loomis. He doesn’t look like your average CC student. Do you&&&
+CHOICE1::Let him piggyback into Loomis with you. Even if he isn’t a college student, crime can’t touch privilege.&&&
+CHOICE2::Slam the door shut behind you and let the front desk RA know that there was a suspicious man trying to get in.&&&
+PICKEDCHOICE1::Damn, now the figure known as the “Loomis man” is known all over campus. Those who had their rooms entered are scared their safety isn’t valued by CC. People even dress up like him for Halloween to the present day.&&&
+PICKEDCHOICE2::Congrats, you single-handedly stopped the Loomis intruder incident! If only. The people behind you let him in and the RA was on their laptop the whole time watching Twilight.&&&
+RESULT1::10;0;5&&&
+RESULT2::-5;0;-10&&&
+##########################
+TITLE::period&&&
+CATEGORY::2&&&
+SCENARIOTEXT::Your meds and birth control get messed up, and now your period makes you hate everything.. Do you&&&
+CHOICE1::Drop the block&&&
+CHOICE2::Stick it out&&&
+PICKEDCHOICE1::You end up partying a lot, but this results in a loss of brain cells.&&&
+PICKEDCHOICE2::Good work! You finished up class with a passing grade.&&&
+RESULT1::30;-15;0&&&
+RESULT2::-10;20;0&&&
+##########################
+TITLE::skiing&&&
+CATEGORY::4&&&
+SCENARIOTEXT::You realize that Colorado is an amazing state for winter sports, and everyone is fiending for their student ski passes. Do you choose&&&
+CHOICE1::Epic&&&
+CHOICE2::Ikon&&&
+PICKEDCHOICE1::You lose the game for being uncool.&&&
+PICKEDCHOICE2::You made the right decision and probably have friends.&&&
+RESULT1::-100;0;0&&&
+RESULT2::15;15;15&&&
+##########################
+TITLE::mentalHealth&&&
+CATEGORY::2&&&
+SCENARIOTEXT::That one mental health day your professor gave you for an excused absence isn’t cutting it this block. Do you&&&
+CHOICE1::Take another day off because you know it’s best for you&&&
+CHOICE2::Go to class because you don’t wanna worry about the consequences&&&
+PICKEDCHOICE1::choicetext&&&
+PICKEDCHOICE2::choicetext&&&
+RESULT1::0;-20;15&&&
+RESULT2::0;20;-15&&&
+##########################
+TITLE::depression?&&&
+CATEGORY::6&&&
+SCENARIOTEXT::You are feeling more tired and down everyday than you used to. You start thinking about how maybe a “prestigious” higher education isn’t for you. Maybe being an adult just sucks. You talk to your friends and they can’t offer any solid advice. &&&
+CHOICE1::Keep your silly emotions and thoughts to yourself.&&&
+CHOICE2::Reach out to CC’s terrible counseling services.&&&
+PICKEDCHOICE1::You end up learning how to tough it out, but you also lose some friends over being “irritable” and “toxic”. You try really hard in class, but you just can’t think as clearly as before, so your professor recommends you try therapy.&&&
+PICKEDCHOICE2::You end up hating all of the counselors at CC and the irony of how an institution with so many resources could lack so severely in mental health care, but at least you had a professional to talk to.&&&
+RESULT1::-10;-10;-10&&&
+RESULT2::-10;0;15&&&
+##########################
