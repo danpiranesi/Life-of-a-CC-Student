@@ -46,7 +46,7 @@ public class Scenario {
      */
     public void printScene(){
         System.out.println(this.getDescription());
-        System.out.println("Choice 1: "+this.getChoice1()+" || Choice 2: "+this.getChoice2());
+        System.out.println("Choice 1: "+this.getChoice1()+"\nChoice 2: "+this.getChoice2());
     }
 
     /**
