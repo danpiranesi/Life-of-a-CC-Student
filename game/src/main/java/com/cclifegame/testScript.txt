@@ -88,3 +88,273 @@ PICKEDCHOICE2::You picked ph2.&&&
 RESULT1::10;10;10&&&
 RESULT2::-10;-10;-10&&&
 ##########################
+TITLE::robson&&&
+CATEGORY::5&&&
+SCENARIOTEXT::You see the ghost of Ed Robson at the hockey game.&&&
+CHOICE1::Conjure his spirit to snap the opponents’ sticks in half.&&&
+CHOICE2::Have him give you seperpowers for your next IM hockey game.&&&
+PICKEDCHOICE1::The 3 people cheering for the enemy team chant “You can’t do that!” but you can. And you did. CC Tigers still lost.&&&
+PICKEDCHOICE2::You show up to your IM hockey game ready to rumble. You absolutely crushed the competition, but the spirit of Robson did not tell you the hidden condition. Each goalie you scored on had his soul eaten by Robson, thus increasing the funding for his arena. And then you realize you have been playing with a broomstick in your room this whole time.&&&
+RESULT1::10;0;10&&&
+RESULT2::20;0;-10&&&
+##########################
+TITLE::essay&&&
+CATEGORY::2&&&
+SCENARIOTEXT::Your professor assigns a 2,000,000 word count research paper due in 37 minutes.&&&
+CHOICE1::You panic and curl into a ball, hiding from the world and your inevitable failure.&&&
+CHOICE2::You go to Susie B’s and grind.&&&
+PICKEDCHOICE1::In the voice of Stephen He, “FAILURE!”&&&
+PICKEDCHOICE2::You went to Susie B’s, but you spent all 37 minutes discussing the political and economic state of the world with someone you just met.&&&
+RESULT1::0;-15;10&&&
+RESULT2::10;20;0&&&
+##########################
+TITLE::lockout&&&
+CATEGORY::5&&&
+SCENARIOTEXT::You get locked out of your room at 3am and your roommate is not answering.&&&
+CHOICE1::Call your RA to unlock your door.&&&
+CHOICE2::Go sleep with a friend.&&&
+PICKEDCHOICE1::Your RA gets mad at you, and you wake your roommate up from their beauty sleep. Lose-lose.&&&
+PICKEDCHOICE2::It takes a while, but you finally find a friend who lets you stay with them. They didn’t have a spare couch/bed though, so you receive the  platonic cuddling buff.&&&
+RESULT1::-10;0;-10&&&
+RESULT2::10;0;20&&&
+##########################
+TITLE::late&&&
+CATEGORY::4&&&
+SCENARIOTEXT::You wake up late for class.&&&
+CHOICE1::Rush to class even though you’re late.&&&
+CHOICE2::Go back to sleep.&&&
+PICKEDCHOICE1::You beat half your peers to class. Maybe Mercury was in retrograde or sum.&&&
+PICKEDCHOICE2::When you wake up at 2pm, your close friend asks if you are okay. You ask your classmates for notes, and they tell you that today was the one day of class you should not have missed. Unlucky.&&&
+RESULT1::5;15;-10&&&
+RESULT2::-5;-15;+15&&&
+##########################
+TITLE::monopoly&&&
+CATEGORY::5&&&
+SCENARIOTEXT::You spend too much gold card money. Do you&&&
+CHOICE1::Willingly fast/starve.&&&
+CHOICE2::Spend money off campus.&&&
+PICKEDCHOICE1::you look skinny as hell now boy&&&
+PICKEDCHOICE2::Raising Canes >>>. Bank account <<<.&&&
+RESULT1::0;-15;-15&&&
+RESULT2::-15;+5;+15&&&
+##########################
+TITLE::out&&&
+CATEGORY::2&&&
+SCENARIOTEXT::You and the BOYS are going out tonight.&&&
+CHOICE1::Stay sober.&&&
+CHOICE2::Get blackout drunk.&&&
+PICKEDCHOICE1::Your friends make fun of you at first, but they really appreciate when you can drive them to Mickey D’s at 1am.&&&
+PICKEDCHOICE2::You become THE party animal. Until the toxic tranquilizer you put in your bloodstream reaches an unheard of concentration, and your friends put you to bed for the night.&&&
+RESULT1::-10;10;0&&&
+RESULT2::+15;-10;-15&&&
+##########################
+TITLE::hungie&&&
+CATEGORY::4&&&
+SCENARIOTEXT::You are hungry.&&&
+CHOICE1::Nasty rasty blasties.&&&
+CHOICE2::Don’t eat because the other dining option hours are f*cked.&&&
+PICKEDCHOICE1::How dissatisfying. Your tummy hurts. At least the ice cream machine is working now.&&&
+PICKEDCHOICE2::The ramen you’ve been stockpiling comes in clutch and you have a 3 course meal of different flavored instant ramens.&&&
+RESULT1::15;0;-15&&&
+RESULT2::0;0;+15&&&
+##########################
+TITLE::roommate&&&
+CATEGORY::3&&&
+SCENARIOTEXT::Your roommate is insanely messy.&&&
+CHOICE1::Kindly ask them to clean.&&&
+CHOICE2::Say “Oh no no no it’s not that bad I don’t mind” whenever she apologizes for being so messy and hold in your pain forever.&&&
+PICKEDCHOICE1::They don’t clean, they never wash their sheets, and you are pretty sure at this point that they don’t brush their teeth either. CC crunchy granola vibes are so gross sometimes.&&&
+PICKEDCHOICE2::You end up wanting to kill yourself, but ANYTHING is better than that dreaded confrontation.&&&
+RESULT1::-5;0;10&&&
+RESULT2::10;0;-15&&&
+##########################
+TITLE::book&&&
+CATEGORY::3&&&
+SCENARIOTEXT::Your professor assigns a 300 page book to read in one day. She says she’ll be nice and even gives you the day off from class so you can read all of it through.&&&
+CHOICE1::Read it.&&&
+CHOICE2::Sparknotes and pray.&&&
+PICKEDCHOICE1::You grind for 10 hours, but unfortunately memory and retention just doesn’t work like that Prof. Susan Ashley. (love u tho)&&&
+PICKEDCHOICE2::You feel great about yourself, and you get your participation points by REALLY selling the chapter 2 summary as your own in group discussion.&&&
+RESULT1::-10;5;-10&&&
+RESULT2::10;15;10&&&
+##########################
+TITLE::laptop&&&
+CATEGORY::5&&&
+SCENARIOTEXT::You leave your computer in class. Oh no!&&&
+CHOICE1::Get it asap and do your homework.&&&
+CHOICE2::Get it tomorrow when class starts.&&&
+PICKEDCHOICE1::The door to your classroom is locked, and now the line at Benji’s is helllllaaaa long. Sadge.&&&
+PICKEDCHOICE2::You see a Canvas announcement on your phone that says your professor has decided to use the built-in free time in the syllabus to give all of their students the day off from homework. Class will even start an hour late for all y’alls mental health. Lucky day!&&&
+RESULT1::-10;-10;-10&&&
+RESULT2::10;10;10&&&
+##########################
+TITLE::lunchtime&&&
+CATEGORY::1&&&
+SCENARIOTEXT::You just finished class and have hungie.&&&
+CHOICE1::Rastall’s.&&&
+CHOICE2::Preserve.&&&
+PICKEDCHOICE1::Lol u got the blasties and miss out on office hours because your little tummy huwt.&&&
+PICKEDCHOICE2::You and the boys roll up to the Preserve with class, and each one of you spends $11 on a doritos bag half full with taco meat and broken up doritos.&&&
+RESULT1::10;-10;-5&&&
+RESULT2::15;0;10&&&
+##########################
+TITLE::major&&&
+CATEGORY::1&&&
+SCENARIOTEXT::You are asked if you want to major in Comp Sci.&&&
+CHOICE1::Say yes.&&&
+CHOICE2::Say no.&&&
+PICKEDCHOICE1::Big sad.&&&
+PICKEDCHOICE2::Healthy life decision, but no money.&&&
+RESULT1::-15;20;-15&&&
+RESULT2::15;-20;15&&&
+##########################
+TITLE::cstore&&&
+CATEGORY::1&&&
+SCENARIOTEXT::You are situated in front of Mathias.&&&
+CHOICE1::Go in Cstore.&&&
+CHOICE2::Walk away from temptation.&&&
+PICKEDCHOICE1::You lose a lot of your VBucks and have to ask LV bag mommy for that gold card plus.&&&
+PICKEDCHOICE2::You keep your VBucks but now you are hungie.&&&
+RESULT1::0;0;10&&&
+RESULT2::5;0;-10&&&
+##########################
+TITLE::swipe&&&
+CATEGORY::1&&&
+SCENARIOTEXT::Your friend is out of Tiger Bucks and needs a swipe at Rastall’s.&&&
+CHOICE1::Swipe ‘em in.&&&
+CHOICE2::Tell them to ask someone else.&&&
+PICKEDCHOICE1::You guys end up trauma dumping in the second room of Rastall’s for 1.5 hours and then go back to your room to makeout in your fursuits. Poggers (dev note. I swear I’m sane I’m not losing my mind writing these up).&&&
+PICKEDCHOICE2::You lose your closest friend and have to wear your Funtime Foxy fursuit all by yourself later. You really regret not starting the Wonder Pets fursuit club earlier this year.(dev note. I swear I’m sane I’m not losing my mind writing these up).&&&
+RESULT1::15;0;-5&&&
+RESULT2::-15;0;10&&&
+##########################
+TITLE::pbike&&&
+CATEGORY::7&&&
+SCENARIOTEXT::You come across a pike bike on the top of a parking garage.&&&
+CHOICE1::Throw it off the top level YOLO.&&&
+CHOICE2::Leave it alone.&&&
+PICKEDCHOICE1::You have the most clout at CC for all of 2 days. However, L Bong Richardson is not happy and now you have to take a Sustainability and Composting adjunct class.&&&
+PICKEDCHOICE2::The PikeRide bike feels starved for attention and throws itself off the top level of the parking garage because it no longer wishes to suffer. You tried calling the CC mental health emergency line but got sent to voicemail twice.&&&
+RESULT1::15;-10;-5&&&
+RESULT2::0;5;10&&&
+##########################
+TITLE::sickbeatz&&&
+CATEGORY::4&&&
+SCENARIOTEXT::Your roommate has gotten into producing sick beats and shit do you?&&&
+CHOICE1::Promote the G’s music and record a fire mixtape over his beatz.&&&
+CHOICE2::Switch rooms because you can’t stand his trash-ass music any longer.&&&
+PICKEDCHOICE1::You become like that Tiktok climber on campus who isn’t good at climbing but is good at creating content.&&&
+PICKEDCHOICE2::Brodie basically becomes ZeroTwo from Darling in the Franxx and cannot keep a roommate for more than 3 weeks. His beats are TOO sick (sniffling emoji).&&&
+RESULT1::15;-10;10&&&
+RESULT2::-5;10;10&&&
+##########################
+TITLE::shid&&&
+CATEGORY::1&&&
+SCENARIOTEXT::You wake up having to take the biggest shit ever. Is it because of&&&
+CHOICE1::A, the rastie blasties&&&
+CHOICE2::B, the beer shits&&&
+PICKEDCHOICE1::you really did that to yourself&&&
+PICKEDCHOICE2::you really REALLY did that to yourself.&&&
+RESULT1::-5;0;5&&&
+RESULT2::10;-5;-10&&&
+##########################
+TITLE::workinggg&&&
+CATEGORY::1&&&
+SCENARIOTEXT::You have a lot of work. Like an “Walker during his first block at CC when he procrastinated until 3rd week of his FYP to do any work” amount of work.&&&
+CHOICE1::You grind in the library until it is done.&&&
+CHOICE2::You do it in your room.&&&
+PICKEDCHOICE1::The spirit of Tutt has been instilled within you and you are now an academic machine, analogous to fictitious characters with photographic memory that digest all of a 1,000 page novel in mere seconds.&&&
+PICKEDCHOICE2::Since you live in South, things start heading… well, South. Your roommate wants to have a “friend” over and you get sexiled.&&&
+RESULT1::10;10;10&&&
+RESULT2::-10;-10;-10&&&
+##########################
+TITLE::reallyHungry&&&
+CATEGORY::1&&&
+SCENARIOTEXT::You are really hungry&&&
+CHOICE1::Go to rast&&&
+CHOICE2::Go to king soopers and make yoself a meal&&&
+PICKEDCHOICE1::you really did that to yourself&&&
+PICKEDCHOICE2::Let’s go king chef shit.&&&
+RESULT1::10;10;10&&&
+RESULT2::10;-10;-10&&&
+##########################
+TITLE::classy&&&
+CATEGORY::1&&&
+SCENARIOTEXT::It’s a Wednesday night, and you have an exam tomorrow. Do you&&&
+CHOICE1::Go to Sig Ki and hit the grimy dance floor&&&
+CHOICE2::Study for your test&&&
+PICKEDCHOICE1::You busted out all the classiest dance moves on this fine Wednesday evening.&&&
+PICKEDCHOICE2::You literally feel your brain grow after you buy a shot of espresso from Susie B’s at 10:57 and get sent up to the fourth floor by the library staff.&&&
+RESULT1::15;-10;-10&&&
+RESULT2::-10;15;10&&&
+##########################
+TITLE::house&&&
+CATEGORY::1&&&
+SCENARIOTEXT::You don’t get your first choice for housing.&&&
+CHOICE1::Email the housing people and demand that as a technically ranked Junior you deserve better accommodations.&&&
+CHOICE2::Stay in whatever housing assignment you were given and stick it out for the year.&&&
+PICKEDCHOICE1::Even though your transcript says you have “Junior” standing, you are more petty than a freshman Lax boy. The housing people hate you now and put you in a forced triple in Loomis.&&&
+PICKEDCHOICE2::You end up getting a roommate you get along really well with, and you do cutesy roommate things like Just Dance parties and baking nights together with them.&&&
+RESULT1::-10;-10;-10&&&
+RESULT2::10;10;10&&&
+##########################
+TITLE::laundry&&&
+CATEGORY::1&&&
+SCENARIOTEXT::The laundry machines in your dorm are all being used.&&&
+CHOICE1::Do laundry another day.&&&
+CHOICE2::Wait till the machines open up and there’s space for you.&&&
+PICKEDCHOICE1::LETS GO PROCRASTINATION WOOOOO!!&&&
+PICKEDCHOICE2::Patience is truly a virtue.&&&
+RESULT1::10;0;10&&&
+RESULT2::10;0;-10&&&
+##########################
+TITLE::imgame&&&
+CATEGORY::4&&&
+SCENARIOTEXT::You lost your intramural ice broomball game.&&&
+CHOICE1::Walk quietly back to your dorm with an aura of defeat.&&&
+CHOICE2::Celebrate with your friends because your team had more fun than the other team.&&&
+PICKEDCHOICE1::damn bro, that sucks.&&&
+PICKEDCHOICE2::PARTY ROCKERS IN THE HOUUUUSE TONIGHT!!&&&
+RESULT1::-10;10;10&&&
+RESULT2::10;-5;-5&&&
+##########################
+TITLE::veto&&&
+CATEGORY::5&&&
+SCENARIOTEXT::You walk by big cardboard letters that say VOTE outside of worner. You feel an urge to rearrange them.&&&
+CHOICE1::Rearrange the letters to say VETO&&&
+CHOICE2::Rearrange the letters to say TOE. Break into Shove Chapel later that night and place the V on the steeple.&&&
+PICKEDCHOICE1::kinda lame and unoriginal, this happens every year.&&&
+PICKEDCHOICE2::THEY PUT THE V ON THE CHAPEL!?!? YOOOOOOOOOOOOOOOOOO&&&
+RESULT1::5;0;-5&&&
+RESULT2::20;-10;-10&&&
+##########################
+TITLE::physics&&&
+CATEGORY::5&&&
+SCENARIOTEXT::It’s the beginning of second week and you feel like speedrunning quantum physics in 3-and-a-half weeks is too overwhelming. Do you&&&
+CHOICE1::Drop the class!&&&
+CHOICE2::Uh, I think I can get through this…&&&
+PICKEDCHOICE1::That was the best decision of your academic career. You got out more and feel like a vibrant youth once again.&&&
+PICKEDCHOICE2::You are really good at physics now, but you forgot how to talk to people. You also have only slept for a cumulative 10 hours in the past week. Have a good block break!&&&
+RESULT1::10;-5;20&&&
+RESULT2::-10;20;-10&&&
+##########################
+TITLE::yak&&&
+CATEGORY::5&&&
+SCENARIOTEXT::You get roasted in Yikyak!&&&
+CHOICE1::Get your friends to downvote it so it gets taken down.&&&
+CHOICE2::Delete the app and move on.&&&
+PICKEDCHOICE1::Friends came in clutch, but you get judged for caring so much.&&&
+PICKEDCHOICE2::Smart move. Also, cyberbullying isn’t real. Just don’t look at it. Put your phone down. Duh. Good shit.&&&
+RESULT1::-10;0;10&&&
+RESULT2::+10;0;-10&&&
+##########################
+TITLE::crooz&&&
+CATEGORY::2&&&
+SCENARIOTEXT::It's the fourth Tuesday and you have a final exam tomorrow.&&&
+CHOICE1::Study, Study, Study&&&
+CHOICE2::CROOOOOZ&&&
+PICKEDCHOICE1::You are now a weapon of academic achievement.&&&
+PICKEDCHOICE2::You are now a weapon of academic achievement.&&&
+RESULT1::-5;10;-10&&&
+RESULT2::15;15;15&&&
+##########################
