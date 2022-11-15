@@ -11,7 +11,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" prefHeight="608.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cclifegame.gameController">
+<GridPane alignment="CENTER" prefHeight="780.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cclifegame.gameController">
   <columnConstraints>
     <ColumnConstraints hgrow="ALWAYS" maxWidth="300.0" minWidth="10.0" prefWidth="140.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="700.0" minWidth="10.0" prefWidth="275.0" />
@@ -20,7 +20,7 @@
   <rowConstraints>
     <RowConstraints maxHeight="130.0" minHeight="3.0" prefHeight="6.0" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="275.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="375.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Button fx:id="leftButton" mnemonicParsing="false" onAction="#leftDec" prefHeight="27.0" prefWidth="62.0" text="&lt;" GridPane.halignment="CENTER" GridPane.rowIndex="1">
@@ -33,11 +33,6 @@
          <effect>
             <ColorAdjust />
          </effect>
-      </Button>
-      <Button fx:id="rightButton" layoutX="22.0" layoutY="185.0" mnemonicParsing="false" onAction="#rightDec" prefHeight="27.0" prefWidth="62.0" text="&gt;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
       </Button>
       <Label fx:id="leftLevelText" alignment="CENTER" contentDisplay="CENTER" prefHeight="89.0" prefWidth="197.0" textAlignment="CENTER" underline="true" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <GridPane.margin>
@@ -64,22 +59,11 @@
             <Insets top="-15.0" />
          </padding>
       </Label>
-      <ImageView fx:id="levelImage" fitHeight="290.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-         <image>
-            <Image url="@../../../java/com/cclifegame/college.png" />
-         </image>
+      <ImageView fx:id="levelImage" fitHeight="260.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets left="9.0" />
          </GridPane.margin>
       </ImageView>
-      <Label fx:id="mainLevelText" alignment="CENTER" contentDisplay="CENTER" prefHeight="214.0" prefWidth="601.0" text="Press Play!" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-         <GridPane.margin>
-            <Insets bottom="10.0" />
-         </GridPane.margin>
-         <font>
-            <Font name="SF Pro Display Bold" size="22.0" />
-         </font>
-      </Label>
       <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" opacity="0.63" prefHeight="44.0" prefWidth="107.0" text="Play" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <opaqueInsets>
             <Insets />
@@ -192,6 +176,19 @@
             <Insets bottom="45.0" left="-200.0" />
          </GridPane.margin>
       </Label>
+      <Button fx:id="rightButton" layoutX="129.0" layoutY="266.0" mnemonicParsing="false" onAction="#rightDec" prefHeight="27.0" prefWidth="62.0" text="&gt;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Button>
+      <Text fx:id="mainLevelText" strokeType="OUTSIDE" strokeWidth="0.0" text="Press Play To Start Your Adventure!" textAlignment="CENTER" wrappingWidth="403.39471435546875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="SF Pro Display Bold" size="22.0" />
+         </font>
+      </Text>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

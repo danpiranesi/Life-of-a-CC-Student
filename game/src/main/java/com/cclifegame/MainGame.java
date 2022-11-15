@@ -70,6 +70,8 @@ public class MainGame {
     public void printOneScenario() {
         scene = randomDraw();
         setScenarioText(scene.getDescription(), scene.getChoice1(), scene.getChoice2(), getBlock());
+        Scenarios.remove(scene);
+        gC.updateImage("wedding");
     }
 
     // method to set the text for the scenario

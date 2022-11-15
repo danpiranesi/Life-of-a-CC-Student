@@ -16,12 +16,15 @@ public class gameController implements Initializable {
 
     public MainGame game;
     public int[] current = { 50, 50, 50 };
+    public int[] currentR = { 50, 50, 50 };
     int startCount = 0;
-    boolean start = true;
     int rightCount = 0;
     int leftCount = 0;
     int right;
     int left;
+    boolean leftI = true;
+    boolean rightI = true;
+    boolean button = true;
 
     @FXML
     private Text sleepStat;
@@ -36,7 +39,7 @@ public class gameController implements Initializable {
     @FXML
     private Label rightLevelText;
     @FXML
-    private Label mainLevelText;
+    private Text mainLevelText;
     @FXML
     private Label blockCounter;
     @FXML
@@ -79,53 +82,86 @@ public class gameController implements Initializable {
             Endings.add(end2);
             Endings.add(ph);
 
+            // updateImage("test");
             startButton.setText("Next");
             startButton.setStyle("-fx-background-color: #1e69e8");
 
             game = new MainGame(ps.getAllScenarios(), Endings, App.getKeep());
             startCount++;
-        } else if (game.getBlock() <= 32 && game.getStats()[0] > 0 && game.getStats()[0] < 100
+        } else if (button && game.getBlock() <= 32 && game.getStats()[0] > 0 && game.getStats()[0] < 100
                 && game.getStats()[1] > 0 && game.getStats()[1] < 100
                 && game.getStats()[2] > 0 && game.getStats()[2] < 100) {
-            leftCount = 0;
-            rightCount = 0;
+            leftI = true;
+            rightI = true;
+            button = false; // prevent this from being pressed many times
             hacker.setText("");
             game.setBlock(game.getBlock() + 1);
             game.printOneScenario();
             game.setStats(getCurrent());
             System.out.println("Player current stats " + Arrays.toString(game.getStats()));
-            // TODO: add functionality to prevent player from rage tapping start to get
-            // through blocks
-        } else if (startCount > 1) {
-            leftCount = 0;
-            rightCount = 0;
+        } else if (button == false) {
             hacker.setText(
-                    "Stop trying to skip blocks, the school needs your financial assistance. Press a decision button instead.");
+                    "Stop trying to skip blocks, the school needs your financial assistance! Please press a decision button instead.");
         } else {
-            mainLevelText.setText("You have to drop out");
+            if (game.getStats()[0] <= 0) {
+                mainLevelText.setText("You have to drop out due to not getting enough sleep.");
+            }
+            if (game.getStats()[0] >= 100) {
+                mainLevelText.setText("You have to drop out due to not getting too much sleep.");
+            }
+            if (game.getStats()[1] <= 0) {
+                mainLevelText.setText("You have to drop out due to not being social enough.");
+            }
+            if (game.getStats()[1] >= 100) {
+                mainLevelText.setText("You have to drop out due to being too social.");
+            }
+            if (game.getStats()[2] <= 0) {
+                mainLevelText.setText("You have to drop out due to having bad grades.");
+            }
+            if (game.getStats()[2] >= 100) {
+                mainLevelText.setText("You have to drop out due to having too high of grades.");
+            }
+
+            startButton.setText("Again?");
+            startButton.setStyle("-fx-background-color: #1e69e8"); // TODO change button color
+
+            startCount = 0;
+            leftI = true;
+            rightI = true;
+            game.setBlock(0);
+            current[0] = 50;
+            current[1] = 50;
+            current[2] = 50;
+            game.setStats(current);
+
+            // TODO reset all attributes
         }
 
     }
 
     @FXML // upon left button click
     public void leftDec() {
-        if (leftCount == 0) {
+        if (leftI == true) {
             applyLeftStats(game.getStats(), game.getSceneLeft(), game.getSceneConLeft());
-            leftCount++;
+            leftI = false; // prevent the button from being pressed multiple times
+            rightI = false;
+            button = true;
             hacker.setText("");
         } else {
-            hacker.setText("L. Song says no! Please press the next button instead.");
+            hacker.setText("Are you trying to violate the Honor Code?! Please press Next button!");
         }
     }
 
     @FXML // upon right button click
     public void rightDec() {
-        if (rightCount == 0) {
+        if (rightI == true) {
             applyRightStats(game.getStats(), game.getSceneRight(), game.getSceneConRight());
-            rightCount++;
+            rightI = false; // prevent the button from being pressed multiple times
+            leftI = false;
+            button = true;
             hacker.setText("");
         } else {
-            hacker.setText("L. Song says no! Please press the next button instead.");
+            hacker.setText("Are you trying to violate the Honor Code?! Please press Next button!");
         }
     }
 
@@ -145,9 +181,9 @@ public class gameController implements Initializable {
     }
 
     @FXML // updates image
-    private void updateImage() {
+    public void updateImage(String imageID) {
         Image image = new Image(
-                "file:/Users/danschmidt/Documents/CC/CS2/FinalProject/Life-of-a-CC-Student/cclifegame/src/main/java/com/cclifegame/college.png");
+                "file:wedding.png");
         levelImage.setImage(image);
     }
 
