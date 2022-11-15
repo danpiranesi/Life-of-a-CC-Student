@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
@@ -9,105 +11,189 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cclifegame.gameController">
+<GridPane alignment="CENTER" prefHeight="608.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cclifegame.gameController">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="140.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="483.0" minWidth="10.0" prefWidth="275.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="140.0" />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="300.0" minWidth="10.0" prefWidth="140.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="700.0" minWidth="10.0" prefWidth="275.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="300.0" minWidth="10.0" prefWidth="140.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="130.0" minHeight="3.0" prefHeight="6.0" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="275.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="leftButton" mnemonicParsing="false" onAction="#applyLeftStats" prefHeight="27.0" prefWidth="62.0" text="&lt;" GridPane.rowIndex="1">
+      <Button fx:id="leftButton" mnemonicParsing="false" onAction="#leftDec" prefHeight="27.0" prefWidth="62.0" text="&lt;" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <padding>
             <Insets left="5.0" />
          </padding>
          <GridPane.margin>
-            <Insets left="42.0" />
+            <Insets />
          </GridPane.margin>
          <effect>
             <ColorAdjust />
          </effect>
       </Button>
-      <Button fx:id="rightButton" layoutX="22.0" layoutY="185.0" mnemonicParsing="false" onAction="#applyRightStats" prefHeight="27.0" prefWidth="62.0" text="&gt;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <Button fx:id="rightButton" layoutX="22.0" layoutY="185.0" mnemonicParsing="false" onAction="#rightDec" prefHeight="27.0" prefWidth="62.0" text="&gt;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <GridPane.margin>
-            <Insets left="42.0" />
+            <Insets />
          </GridPane.margin>
       </Button>
-      <Label fx:id="leftLevelText" alignment="CENTER" contentDisplay="CENTER" text="Have a wedding in Shove" textAlignment="CENTER" GridPane.rowIndex="1">
+      <Label fx:id="leftLevelText" alignment="CENTER" contentDisplay="CENTER" prefHeight="89.0" prefWidth="197.0" textAlignment="CENTER" underline="true" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <GridPane.margin>
-            <Insets bottom="-55.0" left="11.0" />
+            <Insets bottom="-135.0" />
          </GridPane.margin>
+         <font>
+            <Font name="SF Pro Display Regular" size="13.0" />
+         </font>
+         <padding>
+            <Insets top="-15.0" />
+         </padding>
       </Label>
-      <Label fx:id="rightLevelText" alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="218.0" text="Wait until college is over" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <Label fx:id="rightLevelText" alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="218.0" prefHeight="89.0" prefWidth="197.0" textAlignment="CENTER" underline="true" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <GridPane.margin>
-            <Insets bottom="-55.0" left="13.0" />
+            <Insets bottom="-135.0" />
          </GridPane.margin>
+         <font>
+            <Font name="SF Pro Display Regular" size="13.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="-15.0" />
+         </padding>
       </Label>
-      <ImageView fx:id="levelImage" fitHeight="290.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <ImageView fx:id="levelImage" fitHeight="290.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <image>
-            <Image url="file:/Users/danschmidt/Documents/CC/CS2/FinalProject/Life-of-a-CC-Student/cclifegame/src/main/java/com/cclifegame/wedding.png" />
+            <Image url="@../../../java/com/cclifegame/college.png" />
          </image>
          <GridPane.margin>
             <Insets left="9.0" />
          </GridPane.margin>
       </ImageView>
-      <Label fx:id="mainLevelText" alignment="CENTER" contentDisplay="CENTER" text="You meet the person of your dreams" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <Label fx:id="mainLevelText" alignment="CENTER" contentDisplay="CENTER" prefHeight="214.0" prefWidth="601.0" text="Press Play!" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
          <GridPane.margin>
-            <Insets bottom="10.0" left="45.0" />
+            <Insets bottom="10.0" />
          </GridPane.margin>
+         <font>
+            <Font name="SF Pro Display Bold" size="22.0" />
+         </font>
       </Label>
-      <Circle fill="#a378278c" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1">
-         <GridPane.margin>
-            <Insets bottom="5.0" left="35.0" />
-         </GridPane.margin>
-      </Circle>
-      <Circle fill="#fff41f7a" layoutX="220.0" layoutY="34.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1">
-         <GridPane.margin>
-            <Insets bottom="5.0" left="120.0" />
-         </GridPane.margin>
-      </Circle>
-      <Circle fill="#ff1f1fa0" layoutX="305.0" layoutY="34.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1">
-         <GridPane.margin>
-            <Insets bottom="5.0" left="200.0" />
-         </GridPane.margin>
-      </Circle>
-      <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetGame" opacity="0.63" prefHeight="27.0" prefWidth="53.0" text="Reset" GridPane.columnIndex="2">
+      <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" opacity="0.63" prefHeight="44.0" prefWidth="107.0" text="Play" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <GridPane.margin>
-            <Insets left="50.0" />
+            <Insets />
          </GridPane.margin>
          <effect>
-            <ColorAdjust saturation="0.6" />
+            <ColorAdjust hue="0.62" saturation="1.0" />
          </effect>
+         <font>
+            <Font name="SF Pro Display Medium Italic" size="22.0" />
+         </font>
       </Button>
-      <Text fx:id="sleepStat" strokeType="OUTSIDE" strokeWidth="0.0" text="50" GridPane.columnIndex="1">
+      <Text fx:id="sleepStat" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
          <GridPane.margin>
-            <Insets bottom="5.0" left="47.0" />
+            <Insets left="-200.0" />
          </GridPane.margin>
+         <font>
+            <Font name="SF Pro Display Heavy" size="34.0" />
+         </font>
       </Text>
-      <Text fx:id="socialLifeStat" layoutX="212.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" GridPane.columnIndex="1">
+      <Text fx:id="socialLifeStat" layoutX="212.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
          <GridPane.margin>
-            <Insets bottom="5.0" left="132.0" />
+            <Insets />
          </GridPane.margin>
+         <font>
+            <Font name="SF Pro Display Heavy" size="34.0" />
+         </font>
       </Text>
-      <Text fx:id="gradesStat" layoutX="297.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" GridPane.columnIndex="1">
+      <Text fx:id="gradesStat" layoutX="297.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
          <GridPane.margin>
-            <Insets bottom="5.0" left="212.0" />
+            <Insets left="200.0" />
          </GridPane.margin>
+         <font>
+            <Font name="SF Pro Display Heavy" size="34.0" />
+         </font>
       </Text>
-      <Label fx:id="blockCounter" text="Block 1">
+      <Label fx:id="blockCounter" GridPane.halignment="CENTER">
          <GridPane.margin>
-            <Insets left="27.0" />
+            <Insets />
          </GridPane.margin>
          <font>
             <Font size="31.0" />
          </font>
       </Label>
+      <Label fx:id="hacker" textAlignment="CENTER" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="SF Pro Display Bold" size="24.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="gradesBox" arcHeight="5.0" arcWidth="5.0" height="64.0" stroke="#0000004f" strokeType="INSIDE" width="81.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.7023809523809523">
+               <stops>
+                  <Stop color="#ff3c0069" />
+                  <Stop color="#3eb03100" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+         <GridPane.margin>
+            <Insets left="200.0" />
+         </GridPane.margin>
+      </Rectangle>
+      <Label text="GRADES" textFill="#00000086" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="45.0" left="200.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="SF Pro Display Bold" size="13.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="socialBox" arcHeight="5.0" arcWidth="5.0" height="64.0" stroke="#0000004f" strokeType="INSIDE" width="81.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.7023809523809523">
+               <stops>
+                  <Stop color="#dcff0069" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="sleepBox" arcHeight="5.0" arcWidth="5.0" height="64.0" stroke="#0000004f" strokeType="INSIDE" width="81.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.7023809523809523">
+               <stops>
+                  <Stop color="#5f568769" />
+                  <Stop color="#390dff69" offset="0.007518796992481203" />
+                  <Stop color="#9b31b000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+         <GridPane.margin>
+            <Insets left="-200.0" />
+         </GridPane.margin>
+      </Rectangle>
+      <Label text="SOCIAL" textFill="#00000086" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <font>
+            <Font name="SF Pro Display Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="45.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="SLEEP" textFill="#00000086" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <font>
+            <Font name="SF Pro Display Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="45.0" left="-200.0" />
+         </GridPane.margin>
+      </Label>
    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
 </GridPane>

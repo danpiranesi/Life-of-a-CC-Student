@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 /**
@@ -14,12 +13,22 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static gameController keep = null;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("PlayScene"), 600, 400);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("PlayScene.fxml"));
+        Parent root = (Parent) loader.load();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
+        keep = loader.getController();
         stage.show();
+    }
+
+    public static gameController getKeep() {
+        System.out.println(keep);
+        return keep;
     }
 
     static void setRoot(String fxml) throws IOException {

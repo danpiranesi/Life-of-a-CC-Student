@@ -1,5 +1,10 @@
 package com.cclifegame;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 /**
  * This is the public scenario class where all the scenario tiles are built in.
  */
@@ -13,22 +18,25 @@ public class Scenario {
     private String result2;
     private int[] Lchoice;
     private int[] Rchoice;
+    // private gameController cont;
 
     /**
-     * @param title The name of this scenario. This will link the scenario to a picture.
-     * @param category The category of this scenario. See MainGame method getCategory for details.
+     * @param title       The name of this scenario. This will link the scenario to
+     *                    a picture.
+     * @param category    The category of this scenario. See MainGame method
+     *                    getCategory for details.
      * @param description A text description of the scenario (bodytext).
-     * @param choice1 Left choice text.
-     * @param choice2 Right choice text.
-     * @param result1 Left choice result text.
-     * @param result2 Right choice result text.
-     * @param lchoice Left choice's modification on the player stats.
-     * @param rchoice Right choice's modification on the player stats.
+     * @param choice1     Left choice text.
+     * @param choice2     Right choice text.
+     * @param result1     Left choice result text.
+     * @param result2     Right choice result text.
+     * @param lchoice     Left choice's modification on the player stats.
+     * @param rchoice     Right choice's modification on the player stats.
      */
     public Scenario(String title, int category, String description,
-                    String choice1, String choice2,
-                    String result1, String result2,
-                    int[] lchoice, int[] rchoice) {
+            String choice1, String choice2,
+            String result1, String result2,
+            int[] lchoice, int[] rchoice) {
 
         this.title = title;
         this.category = category;
@@ -41,21 +49,27 @@ public class Scenario {
         this.Rchoice = rchoice;
     }
 
+    // public void setLabels() {
+    // cont.updateLevelText(description, choice1, choice2, 2);
+    // }
+
     /**
      * A function for printing the scenarios.
      */
-    public void printScene(){
+    public void printScene() {
         System.out.println(this.getDescription());
-        System.out.println("Choice 1: "+this.getChoice1()+"\nChoice 2: "+this.getChoice2());
+        System.out.println("Choice 1: " + this.getChoice1() + "\nChoice 2: " + this.getChoice2());
     }
 
     /**
-     * A function to print the choice descriptions based on player's previous choice.
+     * A function to print the choice descriptions based on player's previous
+     * choice.
      * Used in the MainGame.
+     * 
      * @param i the choice (1 or 2).
      */
-    public void printChoiceDesc(int i){
-        if (i == 1){
+    public void printChoiceDesc(int i) {
+        if (i == 1) {
             System.out.println(this.getChoice1());
         } else if (i == 2) {
             System.out.println(this.getChoice2());
@@ -65,12 +79,14 @@ public class Scenario {
     }
 
     /**
-     * A function to print the choice concequences based on player's previous choice.
+     * A function to print the choice concequences based on player's previous
+     * choice.
      * Used in the MainGame.
+     * 
      * @param i the choice (1 or 2).
      */
-    public void printConsequence(int i){
-        if (i == 1){
+    public void printConsequence(int i) {
+        if (i == 1) {
             System.out.println(this.getResult1());
         } else if (i == 2) {
             System.out.println(this.getResult2());
@@ -78,7 +94,6 @@ public class Scenario {
             System.out.println("Invalid choice!");
         }
     }
-
 
     // Getters and Setters
     public String getTitle() {

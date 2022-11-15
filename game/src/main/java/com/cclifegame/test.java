@@ -10,7 +10,7 @@ public class test {
      * Game constructor.
      */
     public test() {
-        //TODO The endings needs a new structure of organization instead of hard-code
+        // TODO The endings needs a new structure of organization instead of hard-code
 
         ArrayList Endings = new ArrayList();
 
@@ -22,7 +22,8 @@ public class test {
         Ending ph = new Ending("PH", 0, "This is a place holder scene");
 
         // Every other endings has been set with placeholders.
-        // The category your stats are in at the end of the game will decide which ending you
+        // The category your stats are in at the end of the game will decide which
+        // ending you
         // end up with.
         Endings.add(ph);
         Endings.add(ph);
@@ -37,9 +38,10 @@ public class test {
         Endings.add(ph);
 
         // Parse the txt file
-        Parser ps = new Parser("D:/Personal Folder/Education/Senior/CP222/SecondClone/Life-of-a-CC-Student/game/src/main/java/com/cclifegame/testScript.txt");
+        Parser ps = new Parser(
+                "/Users/danschmidt/Documents/CC/CS2/FinalProject/Life-of-a-CC-Student/game/src/main/java/com/cclifegame/testScript.txt");
         // Start a game with all the parsed scene
-        MainGame gm = new MainGame(ps.getAllScenarios(), Endings);
+        // MainGame gm = new MainGame(ps.getAllScenarios(), Endings);
     }
 
     /**
