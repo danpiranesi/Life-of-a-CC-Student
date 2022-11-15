@@ -104,22 +104,22 @@ public class gameController implements Initializable {
                     "Stop trying to skip blocks, the school needs your financial assistance! Please press a decision button instead.");
         } else {
             if (game.getStats()[0] <= 0) {
-                mainLevelText.setText("You have to drop out due to not getting enough sleep.");
+                mainLevelText.setText("You either partied too hard, sutdied too hard, or got bad luck and had insomnia. Since you are now nocturnal, you drop out of CC and go to a public state school where you can take night classes like a 40-year old father.");
             }
             if (game.getStats()[0] >= 100) {
-                mainLevelText.setText("You have to drop out due to not getting too much sleep.");
+                mainLevelText.setText("You never know what day it is and miss everyone's texts and calls because your lazy ass is constantly asleep. You have to drop out because everyone forgot you existed.");
             }
             if (game.getStats()[1] <= 0) {
-                mainLevelText.setText("You have to drop out due to not being social enough.");
+                mainLevelText.setText("You haven't socialized in so long that you think the kawaii anime schoolgirls on your Android Crunchyroll app are actually talking to you. You become delusional and have to drop out because you can no longer talk to anyone. Good thing mom's basement is open.");
             }
             if (game.getStats()[1] >= 100) {
-                mainLevelText.setText("You have to drop out due to being too social.");
+                mainLevelText.setText("You socialize so well and make so many connections at this wealthy school that you get invited to a friend's family trip to Europe. You make it big on TikTok while abroad and become a full-time influencer, dropping out and leaving your academic life behind.");
             }
             if (game.getStats()[2] <= 0) {
-                mainLevelText.setText("You have to drop out due to having bad grades.");
+                mainLevelText.setText("Your grades are terrible. Like even UCCS won't accept you. You flunk out.");
             }
             if (game.getStats()[2] >= 100) {
-                mainLevelText.setText("You have to drop out due to having too high of grades.");
+                mainLevelText.setText("You drop out because you are so smart that Google reaches out to you with a six-figure job at their HQ in California, and you accept. Bye bye CC.");
             }
 
             startButton.setText("Again?");
