@@ -1,6 +1,6 @@
 TITLE::loomisMan&&&
 CATEGORY::3&&&
-SCENARIOTEXT::You see a middle-aged man in a red hoodie with a shaved head standing outside Loomis. He doesn’t look like your average CC student. Do you&&&
+SCENARIOTEXT::You see a middle-aged man in a red hoodie with a shaved head standing outside Loomis. He doesn’t look like your average CC student. Do you...&&&
 CHOICE1::Let him piggyback into Loomis with you. Even if he isn’t a college student, crime can’t touch privilege.&&&
 CHOICE2::Slam the door shut behind you and let the front desk RA know that there was a suspicious man trying to get in.&&&
 PICKEDCHOICE1::Damn, now the figure known as the “Loomis man” is known all over campus. Those who had their rooms entered are scared their safety isn’t valued by CC. People even dress up like him for Halloween to the present day.&&&
@@ -20,7 +20,7 @@ RESULT2::-10;20;0&&&
 ##########################
 TITLE::skiing&&&
 CATEGORY::4&&&
-SCENARIOTEXT::You realize that Colorado is an amazing state for winter sports, and everyone is fiending for their student ski passes. Do you choose&&&
+SCENARIOTEXT::You realize that Colorado is an amazing state for winter sports, and everyone is fiending for their student ski passes. Do you choose...&&&
 CHOICE1::Epic&&&
 CHOICE2::Ikon&&&
 PICKEDCHOICE1::You lose the game for being uncool.&&&
@@ -30,13 +30,13 @@ RESULT2::15;15;15&&&
 ##########################
 TITLE::mentalHealth&&&
 CATEGORY::2&&&
-SCENARIOTEXT::That one mental health day your professor gave you for an excused absence isn’t cutting it this block. Do you&&&
+SCENARIOTEXT::That one mental health day your professor gave you for an excused absence isn’t cutting it this block. Do you...&&&
 CHOICE1::Take another day off because you know it’s best for you&&&
 CHOICE2::Go to class because you don’t wanna worry about the consequences&&&
-PICKEDCHOICE1::choicetext&&&
-PICKEDCHOICE2::choicetext&&&
-RESULT1::0;-20;15&&&
-RESULT2::0;20;-15&&&
+PICKEDCHOICE1::You took another day off and your professor kicked you out of the class. Hey, now you can party every night.&&&
+PICKEDCHOICE2::You went to class and were unable to focus. Hey, look at you emobodying the CC robot culture, though!&&&
+RESULT1::-10;20;-25&&&
+RESULT2::0;0;-5&&&
 ##########################
 TITLE::depression?&&&
 CATEGORY::6&&&
@@ -54,39 +54,9 @@ SCENARIOTEXT::It's the fall after you graduated from your high school. Do you wa
 CHOICE1::Enroll in the college.&&&
 CHOICE2::Take a gap year.&&&
 PICKEDCHOICE1::You have successfully enrolled in the college. A whole new life awaits!&&&
-PICKEDCHOICE2::You decided to have a gap year and comeback later to the school.&&&
+PICKEDCHOICE2::You decided to have a gap year and comeback later to the school. A year has passed, now you are enrolled.&&&
 RESULT1::10;10;10&&&
-RESULT2::-10;0;-15&&&
-##########################
-TITLE::ph1&&&
-CATEGORY::1&&&
-SCENARIOTEXT::placeholder&&&
-CHOICE1::ph1.&&&
-CHOICE2::ph2.&&&
-PICKEDCHOICE1::You picked ph1.&&&
-PICKEDCHOICE2::You picked ph2.&&&
-RESULT1::10;10;10&&&
-RESULT2::-10;-10;-10&&&
-##########################
-TITLE::ph5&&&
-CATEGORY::5&&&
-SCENARIOTEXT::placeholder&&&
-CHOICE1::ph1.&&&
-CHOICE2::ph2.&&&
-PICKEDCHOICE1::You picked ph1.&&&
-PICKEDCHOICE2::You picked ph2.&&&
-RESULT1::10;10;10&&&
-RESULT2::-10;-10;-10&&&
-##########################
-TITLE::ph7&&&
-CATEGORY::7&&&
-SCENARIOTEXT::placeholder&&&
-CHOICE1::ph1.&&&
-CHOICE2::ph2.&&&
-PICKEDCHOICE1::You picked ph1.&&&
-PICKEDCHOICE2::You picked ph2.&&&
-RESULT1::10;10;10&&&
-RESULT2::-10;-10;-10&&&
+RESULT2::0;0;0&&&
 ##########################
 TITLE::robson&&&
 CATEGORY::5&&&
@@ -130,7 +100,7 @@ RESULT2::-5;-15;+15&&&
 ##########################
 TITLE::monopoly&&&
 CATEGORY::5&&&
-SCENARIOTEXT::You spend too much gold card money. Do you&&&
+SCENARIOTEXT::You spend too much gold card money. Do you...&&&
 CHOICE1::Willingly fast/starve.&&&
 CHOICE2::Spend money off campus.&&&
 PICKEDCHOICE1::you look skinny as hell now boy&&&
@@ -233,14 +203,14 @@ CATEGORY::7&&&
 SCENARIOTEXT::You come across a pike bike on the top of a parking garage.&&&
 CHOICE1::Throw it off the top level YOLO.&&&
 CHOICE2::Leave it alone.&&&
-PICKEDCHOICE1::You have the most clout at CC for all of 2 days. However, L Bong Richardson is not happy and now you have to take a Sustainability and Composting adjunct class.&&&
+PICKEDCHOICE1::You have the most clout at CC for all of 2 days. However, L. Song Richardson is not happy and now you have to take a Sustainability and Composting adjunct class.&&&
 PICKEDCHOICE2::The PikeRide bike feels starved for attention and throws itself off the top level of the parking garage because it no longer wishes to suffer. You tried calling the CC mental health emergency line but got sent to voicemail twice.&&&
 RESULT1::15;-10;-5&&&
 RESULT2::0;5;10&&&
 ##########################
 TITLE::sickbeatz&&&
 CATEGORY::4&&&
-SCENARIOTEXT::Your roommate has gotten into producing sick beats and shit do you?&&&
+SCENARIOTEXT::Your roommate has gotten into producing sick beats and shit do you...&&&
 CHOICE1::Promote the G’s music and record a fire mixtape over his beatz.&&&
 CHOICE2::Switch rooms because you can’t stand his trash-ass music any longer.&&&
 PICKEDCHOICE1::You become like that Tiktok climber on campus who isn’t good at climbing but is good at creating content.&&&
@@ -250,9 +220,9 @@ RESULT2::-5;10;10&&&
 ##########################
 TITLE::shid&&&
 CATEGORY::1&&&
-SCENARIOTEXT::You wake up having to take the biggest shit ever. Is it because of&&&
-CHOICE1::A, the rastie blasties&&&
-CHOICE2::B, the beer shits&&&
+SCENARIOTEXT::You wake up having to take the biggest shit ever. Is it because of...&&&
+CHOICE1::A, the rastie blasties.&&&
+CHOICE2::B, the beer shits.&&&
 PICKEDCHOICE1::you really did that to yourself&&&
 PICKEDCHOICE2::you really REALLY did that to yourself.&&&
 RESULT1::-5;0;5&&&
@@ -280,7 +250,7 @@ RESULT2::10;-10;-10&&&
 ##########################
 TITLE::classy&&&
 CATEGORY::1&&&
-SCENARIOTEXT::It’s a Wednesday night, and you have an exam tomorrow. Do you&&&
+SCENARIOTEXT::It’s a Wednesday night, and you have an exam tomorrow. Do you...&&&
 CHOICE1::Go to Sig Ki and hit the grimy dance floor&&&
 CHOICE2::Study for your test&&&
 PICKEDCHOICE1::You busted out all the classiest dance moves on this fine Wednesday evening.&&&
@@ -330,7 +300,7 @@ RESULT2::20;-10;-10&&&
 ##########################
 TITLE::physics&&&
 CATEGORY::5&&&
-SCENARIOTEXT::It’s the beginning of second week and you feel like speedrunning quantum physics in 3-and-a-half weeks is too overwhelming. Do you&&&
+SCENARIOTEXT::It’s the beginning of second week and you feel like speedrunning quantum physics in 3-and-a-half weeks is too overwhelming. Do you...&&&
 CHOICE1::Drop the class!&&&
 CHOICE2::Uh, I think I can get through this…&&&
 PICKEDCHOICE1::That was the best decision of your academic career. You got out more and feel like a vibrant youth once again.&&&

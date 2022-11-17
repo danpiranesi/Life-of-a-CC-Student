@@ -34,22 +34,19 @@ public class MainGame {
      * 
      * @param Scenarios
      */
-    public MainGame(ArrayList<Scenario> Scenarios, ArrayList<Ending> Endings, gameController gc) {
+    public MainGame(ArrayList<Scenario> Scenarios, gameController gc) {
         this.inGame = true;
         this.stats = new int[] { 50, 50, 50 };
         this.block = 0;
         this.Scenarios = Scenarios;
-        this.Endings = Endings;
+        // this.Endings = Endings;
 
         this.gC = gc;
 
         updateStats(this.stats);
 
-        // Initiate the parser and read the scenarios
-        sortScene();
-
         // run one scenario
-        printOneScenario();
+        printFirstScenario();
 
         // set player stats
         this.stats = gC.getCurrent();
@@ -66,17 +63,25 @@ public class MainGame {
         gC.updateStats(stats);
     }
 
+    // method to print the first scenario to the GUI
+    public void printFirstScenario() {
+        scene = Scenarios.get(5);
+        setScenarioText(scene.getDescription(), scene.getChoice1(), scene.getChoice2(), getBlock(), "newDay.png");
+        Scenarios.remove(scene);
+        // gC.updateImage("wedding");
+    }
+
     // method to print a scenario to the GUI
     public void printOneScenario() {
         scene = randomDraw();
-        setScenarioText(scene.getDescription(), scene.getChoice1(), scene.getChoice2(), getBlock());
+        setScenarioText(scene.getDescription(), scene.getChoice1(), scene.getChoice2(), getBlock(),
+                scene.getTitle() + ".png");
         Scenarios.remove(scene);
-        gC.updateImage("wedding");
     }
 
     // method to set the text for the scenario
-    public void setScenarioText(String main, String left, String right, int block) {
-        gC.updateLevelText(main, left, right, block);
+    public void setScenarioText(String main, String left, String right, int block, String imageName) {
+        gC.updateLevelText(main, left, right, block, imageName);
     }
 
     // getters for the controller
@@ -94,6 +99,10 @@ public class MainGame {
 
     public String getSceneConRight() {
         return scene.getResult2();
+    }
+
+    public Scenario getScene() {
+        return scene;
     }
 
     // Game flow functions
@@ -121,6 +130,8 @@ public class MainGame {
     /**
      * A function to sort the scene by their categories.
      */
+
+    // with the current GUI we are not using this method
     public void sortScene() {
         List<Scenario> sceList = (ArrayList<Scenario>) Scenarios.clone();
         this.go_touch_grass = sceList.stream().filter(
@@ -145,44 +156,51 @@ public class MainGame {
      * A function for drawing a scenario from the corresponding arraylist.
      */
     public Scenario randomDraw() {
-        int cate = this.getCategory();
-        if (cate == 1) {
-            // draw form go_touch_grass
-            // generate a random integer within the indexes of the go_touch_grass arraylist
-            int randI = randomInt(0, go_touch_grass.size());
-            return go_touch_grass.get(randI);
-        } else if (cate == 2) {
-            // draw form admonition
-            int randI = randomInt(0, admonition.size());
-            return admonition.get(randI);
-        } else if (cate == 3) {
-            // TO-DO: draw form tired
-            int randI = randomInt(0, tired.size());
-            return tired.get(randI);
-        } else if (cate == 4) {
-            // TO-DO: draw form dorm_dweller
-            int randI = randomInt(0, dorm_dweller.size());
-            return dorm_dweller.get(randI);
-        } else if (cate == 5) {
-            // TO-DO: draw form party_animal
-            int randI = randomInt(0, party_animal.size());
-            return party_animal.get(randI);
-        } else if (cate == 6) {
-            // TO-DO: draw form workaholic
-            int randI = randomInt(0, workaholic.size());
-            return workaholic.get(randI);
-        } else if (cate == 7) {
-            // TO-DO: draw form on_the_verge
-            int randI = randomInt(0, on_the_verge.size());
-            return on_the_verge.get(randI);
-        } else if (cate == 8) {
-            // TO-DO: draw form normie
-            int randI = randomInt(0, normie.size());
-            return normie.get(randI);
-        } else {
-            System.out.println("Error: Category out of bound! \nPlease check your stats and loops.");
-            return null;
-        }
+        Random rand = new Random();
+        int index = rand.nextInt(Scenarios.size());
+        return Scenarios.get(index);
+
+        // a bunch of code for if we had more scenarios:
+
+        // int cate = this.getCategory();
+        // if (cate == 1) {
+        // // draw form go_touch_grass
+        // // generate a random integer within the indexes of the go_touch_grass
+        // arraylist
+        // int randI = randomInt(0, go_touch_grass.size());
+        // return go_touch_grass.get(randI);
+        // } else if (cate == 2) {
+        // // draw form admonition
+        // int randI = randomInt(0, admonition.size());
+        // return admonition.get(randI);
+        // } else if (cate == 3) {
+        // // TO-DO: draw form tired
+        // int randI = randomInt(0, tired.size());
+        // return tired.get(randI);
+        // } else if (cate == 4) {
+        // // TO-DO: draw form dorm_dweller
+        // int randI = randomInt(0, dorm_dweller.size());
+        // return dorm_dweller.get(randI);
+        // } else if (cate == 5) {
+        // // TO-DO: draw form party_animal
+        // int randI = randomInt(0, party_animal.size());
+        // return party_animal.get(randI);
+        // } else if (cate == 6) {
+        // // TO-DO: draw form workaholic
+        // int randI = randomInt(0, workaholic.size());
+        // return workaholic.get(randI);
+        // } else if (cate == 7) {
+        // // TO-DO: draw form on_the_verge
+        // int randI = randomInt(0, on_the_verge.size());
+        // return on_the_verge.get(randI);
+        // } else if (cate == 8) {
+        // // TO-DO: draw form normie
+        // int randI = randomInt(0, normie.size());
+        // return normie.get(randI);
+        // } else {
+        // System.out.println("Error: Category out of bound! \nPlease check your stats
+        // and loops.");
+        // return null;
     }
 
     /**
@@ -278,6 +296,7 @@ public class MainGame {
      * 
      * @return A random generated integer.
      */
+    // old function for generating a random int
     public int randomInt(int lower, int upper) {
         if (!(upper < 0)) {
             Random rand = new Random();

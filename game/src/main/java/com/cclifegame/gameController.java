@@ -41,6 +41,12 @@ public class gameController implements Initializable {
     @FXML
     private Text mainLevelText;
     @FXML
+    private Text welcomeText;
+    @FXML
+    private Text source;
+    @FXML
+    private Text levelInfo;
+    @FXML
     private Label blockCounter;
     @FXML
     private Label hacker;
@@ -53,40 +59,21 @@ public class gameController implements Initializable {
 
     @FXML // starts game
     private void startGame() {
+        welcomeText.setText("");
+        source.setText("");
+        levelInfo.setText("");
+        leftButton.setDisable(false);
+        rightButton.setDisable(false);
         if (startCount == 0) {
             Parser ps = new Parser(
                     "/Users/danschmidt/Documents/CC/CS2/FinalProject/Life-of-a-CC-Student/game/src/main/java/com/cclifegame/testScript.txt");
             // Start a game with all the parsed scene
-            ArrayList<Ending> Endings = new ArrayList<Ending>();
-
-            // imi ending
-            String endEnroll = "You have successfully enrolled in the college. A whole new life awaits!";
-            Ending end1 = new Ending("Enrolled", 8, endEnroll);
-            String endGap = "You decided to have a gap year and comeback later to the school.";
-            Ending end2 = new Ending("Gap", 9, endGap);
-            Ending ph = new Ending("PH", 0, "This is a place holder scene");
-
-            // Every other endings has been set with placeholders.
-            // The category your stats are in at the end of the game will decide which
-            // ending you
-            // end up with.
-            Endings.add(ph);
-            Endings.add(ph);
-            Endings.add(ph);
-            Endings.add(ph);
-            Endings.add(ph);
-            Endings.add(ph);
-            Endings.add(ph);
-            Endings.add(ph);
-            Endings.add(end1);
-            Endings.add(end2);
-            Endings.add(ph);
 
             // updateImage("test");
             startButton.setText("Next");
-            startButton.setStyle("-fx-background-color: #1e69e8");
-
-            game = new MainGame(ps.getAllScenarios(), Endings, App.getKeep());
+            startButton.setStyle("-fx-background-color: #f26d00");
+            // updateImage("test");
+            game = new MainGame(ps.getAllScenarios(), App.getKeep());
             startCount++;
         } else if (button && game.getBlock() <= 32 && game.getStats()[0] > 0 && game.getStats()[0] < 100
                 && game.getStats()[1] > 0 && game.getStats()[1] < 100
@@ -98,32 +85,46 @@ public class gameController implements Initializable {
             game.setBlock(game.getBlock() + 1);
             game.printOneScenario();
             game.setStats(getCurrent());
-            System.out.println("Player current stats " + Arrays.toString(game.getStats()));
+            // System.out.println("Player current stats " +
+            // Arrays.toString(game.getStats()));
         } else if (button == false) {
+            levelImage.setImage(null);
             hacker.setText(
                     "Stop trying to skip blocks, the school needs your financial assistance! Please press a decision button instead.");
         } else {
             if (game.getStats()[0] <= 0) {
-                mainLevelText.setText("You have to drop out due to not getting enough sleep.");
+                updateImage("gameOver.png");
+                mainLevelText.setText(
+                        "You either partied too hard, studied too hard, or got bad luck, chose to get an EPIC pass, and had insomnia. Since you are now nocturnal, you drop out of CC and go to a public state school where you can take night classes like a 40-year old father.");
             }
             if (game.getStats()[0] >= 100) {
-                mainLevelText.setText("You have to drop out due to not getting too much sleep.");
+                updateImage("gameOver.png");
+                mainLevelText.setText(
+                        "You never know what day it is and miss everyone's texts and calls because your lazy ass is constantly asleep. You have to drop out because everyone forgot you existed.");
             }
             if (game.getStats()[1] <= 0) {
-                mainLevelText.setText("You have to drop out due to not being social enough.");
+                updateImage("gameOver.png");
+                mainLevelText.setText(
+                        "You haven't socialized in so long that you think the kawaii anime schoolgirls on your Android Crunchyroll app are actually talking to you. You become delusional and have to drop out because you can no longer talk to anyone. Good thing mom's basement is open.");
             }
             if (game.getStats()[1] >= 100) {
-                mainLevelText.setText("You have to drop out due to being too social.");
+                updateImage("gameOver.png");
+                mainLevelText.setText(
+                        "You socialize so well and make so many connections at this wealthy school that you get invited to a friend's family trip to Europe. You make it big on TikTok while abroad and become a full-time influencer, dropping out and leaving your academic life behind.");
             }
             if (game.getStats()[2] <= 0) {
-                mainLevelText.setText("You have to drop out due to having bad grades.");
+                updateImage("gameOver.png");
+                mainLevelText.setText("Your grades are terrible. Like even UCCS won't accept you. You flunk out.");
             }
             if (game.getStats()[2] >= 100) {
-                mainLevelText.setText("You have to drop out due to having too high of grades.");
+                updateImage("gameOver.png");
+                mainLevelText.setText(
+                        "You drop out because you are so smart that Google reaches out to you with a six-figure job at their HQ in California, and you accept. Bye bye CC.");
             }
-
+            leftButton.setDisable(true);
+            rightButton.setDisable(true);
             startButton.setText("Again?");
-            startButton.setStyle("-fx-background-color: #1e69e8"); // TODO change button color
+            startButton.setStyle("-fx-background-color: #f21400");
 
             startCount = 0;
             leftI = true;
@@ -135,8 +136,8 @@ public class gameController implements Initializable {
             game.setStats(current);
 
             // TODO reset all attributes
-        }
 
+        }
     }
 
     @FXML // upon left button click
@@ -148,9 +149,14 @@ public class gameController implements Initializable {
             button = true;
             hacker.setText("");
         } else {
+            levelImage.setImage(null);
             hacker.setText("Are you trying to violate the Honor Code?! Please press Next button!");
         }
     }
+
+    // TODO finish building method for image retrival
+    // game.getScene();
+    // scene.getTitle();
 
     @FXML // upon right button click
     public void rightDec() {
@@ -161,16 +167,18 @@ public class gameController implements Initializable {
             button = true;
             hacker.setText("");
         } else {
+            levelImage.setImage(null);
             hacker.setText("Are you trying to violate the Honor Code?! Please press Next button!");
         }
     }
 
     @FXML // updates level text
-    public void updateLevelText(String mainText, String leftText, String rightText, int block) {
+    public void updateLevelText(String mainText, String leftText, String rightText, int block, String imageName) {
         leftLevelText.setText(leftText);
         rightLevelText.setText(rightText);
         mainLevelText.setText(mainText);
         blockCounter.setText("Block " + block);
+        updateImage(imageName);
     }
 
     @FXML // updates stats
@@ -183,7 +191,7 @@ public class gameController implements Initializable {
     @FXML // updates image
     public void updateImage(String imageID) {
         Image image = new Image(
-                "file:wedding.png");
+                getClass().getResourceAsStream(imageID));
         levelImage.setImage(image);
     }
 
